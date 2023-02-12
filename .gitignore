@@ -1,0 +1,4 @@
+.idea/
+nest/public/api
+docker-compose.override.yml
+.docker/volumes
