@@ -12,6 +12,15 @@ depending on where you start it: local or remote machine)
 It need some time to compile NestJS backend and React frontend, you can track starting progress by 
 checking docker logs for containers `<running_dir>_nest_1` and `<running_dir>_react_1`.
 
+### Troubleshooting
+
+In case if both nest and react containers are working, but site still is unreachable, you might want
+simply restart the nginx server:
+
+```docker-compose restart nginx```
+
+App uses docker-compose v3 file, and adding waiting for things to be started there is quite painful.
+
 ## API
 
 This app is used GraphQL API, powered by Apollo infrastructure (client and server).
